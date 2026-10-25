@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chicky Nuggs</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/Zaneclark2016/website-image/main/chicknnug.jpeg">
+    <style>
+        #nugy{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 500px;
+            height: 1000px;
+        }
+        .spinning {
+            animation: chaos 1s linear infinite;
+        }
+        @keyframes chaos {
+            0% { transform: translate(-50%,-50%) rotate(0deg) scale(1);}
+            25% { transform: translate(-50%,-50%) rotate(90deg) scale(2);}
+            50% { transform: translate(-50%,-50%) rotate(180deg) scale(1);}
+            75% { transform: translate(-50%,-50%) rotate(270deg) scale(3);}
+            100% { transform: translate(-50%,-50%) rotate(360deg) scale(1);}
+        }
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://raw.githubusercontent.com/Zaneclark2016/website-image/main/chicknnug.jpeg" id="nugy">
+    <audio id="chicknaudio" src="https://raw.githubusercontent.com/Zaneclark2016/website-image/main/Record%20(online-voice-recorder.com).mp3" loop></audio>
+    <script>
+        const chicknaudio = document.getElementById("chicknaudio");
+        document.body.addEventListener("click", function() {
+            chicknaudio.play();
+            nugy.classList.add("spinning")
+        });
+    </script>
+</body>
+</html>
